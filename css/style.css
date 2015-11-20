@@ -1,0 +1,83 @@
+/**
+* 布局css
+*/
+
+.common-layout {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+}
+
+#left-warp {
+    position: absolute;
+    top: 0;
+}
+.m-left{
+    left: 0;
+    width: 260px;
+}
+#center-warp {
+    position: absolute;
+    top: 0;
+}
+
+.m-center {
+    left: 260px;
+    right: 36%;
+}
+
+
+#right-warp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36%;
+}
+
+@media only screen and (max-width: 920px) and (min-width: 461px) {
+    .m-left{
+        left: -260px;
+    }
+    .m-center {
+        left: 0;
+        right: 0;
+    }
+
+    .m-right {
+        display: none;
+        width: 70%;
+        right: -70%;
+    }
+}
+
+
+@media only screen and (max-width: 1020px) and (min-width: 921px){
+    .m-right {
+        right: 0;
+        width: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 460px){
+    .m-left {
+        z-index: 3;
+        left: -260px;
+        width: 260px;
+    }
+    .m-center {
+        left: 0;
+        right: 0;
+    }
+    .m-right {
+        display: none;
+        z-index: 3;
+        right: -100%;
+        width: 100%;
+    }
+}
